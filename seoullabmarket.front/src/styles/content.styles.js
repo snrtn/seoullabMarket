@@ -40,7 +40,7 @@ const Content = {
 			].includes(prop),
 	})`
 		display: flex;
-		justify-content: center;
+		justify-content: ${({ justifyContent }) => justifyContent || 'center'};
 		align-items: ${({ alignItems }) => alignItems || 'center'};
 		position: ${({ position }) => position || 'static'};
 		flex-direction: ${({ flexDirection }) => flexDirection || 'row'};
