@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import colors from './color.styles';
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`  
   html {
     font-size: 62.5%;
   }
@@ -33,11 +33,15 @@ const GlobalStyle = createGlobalStyle`
   h1, h2, h3, h4, h5, h6, p, a, button, input, select, textarea{
     font-weight: normal; 
     color: ${colors.black};
+    margin: 0;
   }
   a {
     background-color: transparent;
     text-decoration: none;
     cursor: pointer;
+  }
+  iframe {
+    border: none;
   }
   abbr[title] {
     border-bottom: none;

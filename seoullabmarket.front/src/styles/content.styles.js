@@ -5,8 +5,8 @@ import isPropValid from '@emotion/is-prop-valid';
 const StyledImage = styled.img.withConfig({
 	shouldForwardProp: (prop) => isPropValid(prop) && prop !== !['objectFit', 'Glassmorphism'],
 })`
-	width: 100%;
-	height: 100%;
+	width: ${({ width }) => width || '100%'};
+	height: ${({ height }) => height || '100%'};
 	max-width: ${({ maxWidth }) => maxWidth || '100%'};
 	max-height: ${({ maxHeight }) => maxHeight || '100%'};
 	object-fit: ${({ objectFit }) => objectFit || 'cover'};
@@ -46,7 +46,7 @@ const Content = {
 		flex-direction: ${({ flexDirection }) => flexDirection || 'row'};
 		width: 100%;
 		max-width: ${({ maxWidth }) => maxWidth || '100%'};
-		height: 100%;
+		height: ${({ height }) => height || '100%'};
 		max-height: ${({ maxHeight }) => maxHeight || '100%'};
 		background-color: ${({ backgroundColor }) => backgroundColor || 'transparent'};
 		border-radius: 8px;
@@ -57,7 +57,7 @@ const Content = {
 			`
 			z-index: -66;
 			position: absolute;
-			background: rgba(255, 255, 255, 0.2);
+			background: rgba(000, 000, 000, 0.6);
 			backdrop-filter: blur(5px);
 			-webkit-backdrop-filter: blur(5px);
 		`}

@@ -5,13 +5,11 @@ import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
 	return (
-		<div>
+		<React.Fragment>
 			<Header />
-			<main>
-				<Outlet />
-			</main>
+			<Outlet />
 			<Footer />
-		</div>
+		</React.Fragment>
 	);
 };
 

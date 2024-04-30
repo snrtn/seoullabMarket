@@ -1,11 +1,11 @@
 import React from 'react';
+import Container from '../styles/container.styles';
 
 const GalleryPage = () => {
 	return (
-		<div>
-			<h1>Gallery Page</h1>
-			<p>Explore our gallery of images here.</p>
-		</div>
+		<Container.Section>
+			<Container.Wrapper height={'200rem'}>GalleryPage</Container.Wrapper>
+		</Container.Section>
 	);
 };
 
