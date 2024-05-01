@@ -6,10 +6,10 @@ const MenuPage = () => {
 	return (
 		<Content.Box maxWidth={'120rem'} maxHeight={'6.4rem'}>
 			<Content.Box justifyContent={'space-between'} maxWidth={'60rem'}>
-				<Typography.A to='starters'>starters</Typography.A>
-				<Typography.A to='mains'>mains</Typography.A>
-				<Typography.A to='desserts'>desserts</Typography.A>
-				<Typography.A to='drinks'>drinks</Typography.A>
+				<Typography.A to='starters'>Entrées</Typography.A>
+				<Typography.A to='mains'>Plats</Typography.A>
+				<Typography.A to='desserts'>Desserts</Typography.A>
+				<Typography.A to='drinks'>Boissons</Typography.A>
 			</Content.Box>
 		</Content.Box>
 	);

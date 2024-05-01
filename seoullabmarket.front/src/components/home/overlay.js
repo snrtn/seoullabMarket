@@ -9,9 +9,9 @@ const Overlay = () => {
 			<Typography.A to={'/menu/starters'}>
 				<Hexagon>
 					<Shape>
-						<ShapeImage src={'/assets/starters.jpg'} />
+						<ShapeImage src={'/assets/overlay/starters.jpg'} />
 					</Shape>
-					<BackgroundGradient color='crimson'>
+					<BackgroundGradient>
 						<Typography.H2 color={colors.white}>Entrées</Typography.H2>
 					</BackgroundGradient>
 				</Hexagon>
@@ -19,9 +19,9 @@ const Overlay = () => {
 			<Typography.A to={'/menu/mains'}>
 				<Hexagon>
 					<Shape>
-						<ShapeImage src={'/assets/mains.jpg'} />
+						<ShapeImage src={'/assets/overlay/mains.jpg'} />
 					</Shape>
-					<BackgroundGradient color='royalblue'>
+					<BackgroundGradient>
 						<Typography.H2 color={colors.white}>Plats</Typography.H2>
 					</BackgroundGradient>
 				</Hexagon>
@@ -29,9 +29,9 @@ const Overlay = () => {
 			<Typography.A to={'/menu/desserts'}>
 				<Hexagon>
 					<Shape>
-						<ShapeImage src={'/assets/desserts.jpg'} />
+						<ShapeImage src={'/assets/overlay/desserts.jpg'} />
 					</Shape>
-					<BackgroundGradient color='yellowgreen'>
+					<BackgroundGradient>
 						<Typography.H2 color={colors.white}>Desserts</Typography.H2>
 					</BackgroundGradient>
 				</Hexagon>

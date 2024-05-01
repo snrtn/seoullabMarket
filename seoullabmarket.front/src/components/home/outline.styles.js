@@ -3,6 +3,7 @@ import colors from '../../styles/color.styles';
 import device from '../../styles/mediaQuerie.styles';
 
 export const Button = styled.button`
+	font-family: Orbitron;
 	color: transparent;
 	text-decoration: none;
 	font-size: 10em;

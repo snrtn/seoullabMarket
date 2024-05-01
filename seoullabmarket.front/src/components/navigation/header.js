@@ -10,13 +10,13 @@ const Header = () => {
 			<Container.Article height={'6.4rem'} Glassmorphism={true}>
 				<Content.Box maxWidth={'120rem'}>
 					<Content.Box justifyContent={'space-between'} maxWidth={'60rem'}>
-						<Typography.A color={colors.white} to='/'>
+						<Typography.A color={colors.darkWhite} to='/' activeColor={colors.orange}>
 							Accueil
 						</Typography.A>
-						<Typography.A color={colors.white} to='/menu'>
+						<Typography.A color={colors.darkWhite} to='/menu' activeColor={colors.orange}>
 							Menu
 						</Typography.A>
-						<Typography.A color={colors.white} to='/gallery'>
+						<Typography.A color={colors.darkWhite} to='/gallery' activeColor={colors.orange}>
 							Galerie
 						</Typography.A>
 					</Content.Box>

@@ -1,8 +1,8 @@
 const size = {
 	sm: '576px',
 	md: '768px',
-	lg: '992px',
-	xl: '1200px',
+	lg: '1024px',
+	xl: '1280px',
 };
 
 const generateMediaQuery = (sizeKey, type) => {

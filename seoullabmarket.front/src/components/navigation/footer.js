@@ -10,31 +10,31 @@ import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 const Footer = () => {
 	return (
 		<Container.Wrapper height={'30rem'} flexDirection={'column'} backgroundColor={colors.black}>
-			<Container.Article flexDirection={'column'} maxHeight={'5rem'} lgMaxHeight={'2rem'} smMaxHeight={'2rem'}>
-				<Typography.H3 fontWeight={'bold'} color={colors.white}>
+			<Container.Article flexDirection={'column'} maxHeight={'6rem'} lgMaxHeight={'2rem'} smMaxHeight={'2rem'}>
+				<Typography.H1 fontWeight={'bold'} color={colors.white}>
 					Seoul Lab
-				</Typography.H3>
+				</Typography.H1>
 				<Typography.P color={colors.orange}>Cuisine coréenne moderne</Typography.P>
 			</Container.Article>
 			<Container.Article maxHeight={'6rem'} lgMaxHeight={'10rem'} smMaxHeight={'8rem'}>
 				<Content.Box maxWidth={'120rem'}>
 					<Content.Box justifyContent={'space-between'} maxWidth={'40rem'}>
 						<Typography.A highlight={true} highlightColor={colors.orange} color={colors.white} to='/menu/starters'>
-							starters
+							Entrées
 						</Typography.A>
 						<Typography.A highlight={true} highlightColor={colors.orange} color={colors.white} to='/menu/mains'>
-							mains
+							Plats
 						</Typography.A>
 						<Typography.A highlight={true} highlightColor={colors.orange} color={colors.white} to='/menu/desserts'>
-							desserts
+							Desserts
 						</Typography.A>
 						<Typography.A highlight={true} highlightColor={colors.orange} color={colors.white} to='/menu/drinks'>
-							drinks
+							Boissons
 						</Typography.A>
 					</Content.Box>
 				</Content.Box>
 			</Container.Article>
-			<Container.Article maxHeight={'5rem'} lgMaxHeight={'5rem'} smMaxHeight={'8rem'}>
+			<Container.Article maxHeight={'10rem'} lgMaxHeight={'9rem'} smMaxHeight={'8rem'}>
 				<SnsSection>
 					<StyledLink target='_blank' to='https://www.instagram.com/restaurant.seoul.lab/' bgColor='#e4405f'>
 						<FontAwesomeIcon className='fa' icon={faInstagram} />

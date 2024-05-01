@@ -31,11 +31,13 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1em;
   }
   h1, h2, h3, h4, h5, h6, p, a, button, input, select, textarea{
+    font-family: TitilliumWeb;
     font-weight: normal; 
     color: ${colors.black};
     margin: 0;
   }
   a {
+    font-family: Orbitron;
     background-color: transparent;
     text-decoration: none;
     cursor: pointer;

@@ -77,11 +77,16 @@ const Container = {
 				'smHeight',
 				'lgWidth',
 				'lgHeight',
+				'smAlignItems',
+				'justifyContent',
+				'alignItems',
+				'lgPadding',
+				'xlPadding',
 			].includes(prop),
 	})`
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		justify-content: ${({ justifyContent }) => justifyContent || 'center'};
+		align-items: ${({ alignItems }) => alignItems || 'center'};
 		position: ${({ position }) => position || 'static'};
 		flex: ${({ flex }) => flex || 1};
 		flex-direction: ${({ flexDirection }) => flexDirection || 'row'};
@@ -98,6 +103,9 @@ const Container = {
 			backdrop-filter: blur(5px);
 			-webkit-backdrop-filter: blur(5px);
 		`}
+		${device.xl} {
+			padding: ${({ xlPadding }) => xlPadding || '0'};
+		}
 		${device.lg} {
 			flex: ${({ lgFlex }) => lgFlex || 1};
 			flex-direction: ${({ lgFlexDirection, flexDirection }) => lgFlexDirection || flexDirection};
@@ -105,10 +113,12 @@ const Container = {
 			height: ${({ lgHeight }) => lgHeight || '100%'};
 			max-width: ${({ lgMaxWidth }) => lgMaxWidth || '100%'};
 			max-height: ${({ lgMaxHeight }) => lgMaxHeight || '100%'};
+			padding: ${({ lgPadding, xlPadding }) => (lgPadding ? xlPadding : lgPadding)};
 		}
 		${device.sm} {
 			display: ${({ smDisplay }) => smDisplay || 'flex'};
 			flex: ${({ smFlex }) => smFlex || 1};
+			align-items: ${({ smAlignItems }) => smAlignItems || 'center'};
 			flex-direction: ${({ smFlexDirection, flexDirection }) => smFlexDirection || flexDirection};
 			width: ${({ smWidth }) => smWidth || '100%'};
 			height: ${({ smHeight }) => smHeight || '100%'};

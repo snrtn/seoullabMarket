@@ -10,12 +10,6 @@ const MenuPage = () => {
 			<Container.Wrapper>
 				<Container.Article flexDirection={'column'}>
 					<Content.Box height={'10rem'} />
-					<Content.Image
-						src={'/public/assets/jumbotron.jpg'}
-						maxWidth={'100rem'}
-						maxHeight={'100rem'}
-						objectFit={'cover'}
-					/>
 					<HeaderMenu />
 					<Outlet />
 				</Container.Article>

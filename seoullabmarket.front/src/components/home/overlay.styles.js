@@ -4,6 +4,9 @@ import device from '../../styles/mediaQuerie.styles';
 export const Frame = styled.div`
 	display: flex;
 	gap: 40px;
+	${device.xl} {
+		gap: 20px;
+	}
 	${device.sm} {
 		flex-direction: column;
 		gap: 60px;
@@ -20,7 +23,7 @@ export const Hexagon = styled.div`
 		height: 250px;
 	}
 	${device.sm} {
-		width: 260px;
+		width: 220px;
 		height: 250px;
 	}
 	&:hover {
@@ -40,6 +43,22 @@ export const Hexagon = styled.div`
 		opacity: 0.6;
 		transform: scale(0.8);
 		bottom: -130px;
+	}
+	${device.lg}, ${device.sm} {
+		width: 220px;
+		height: 250px;
+
+		&:hover,
+		& {
+			transform: translateY(-60px);
+		}
+
+		&:before,
+		&:hover:before {
+			opacity: 0.6;
+			transform: scale(0.8);
+			bottom: -130px;
+		}
 	}
 `;
 
@@ -78,12 +97,21 @@ export const Caption = styled.div`
 	h2 {
 		font-size: 2em;
 	}
+
+	${device.lg}, ${device.sm} {
+		opacity: 1;
+		transform: translateY(0);
+	}
 `;
 
-// 컴포넌트별 개별 배경 설정
 export const BackgroundGradient = styled(Caption)`
 	clip-path: polygon(50% 0, 100% 30%, 100% 70%, 50% 100%, 0 70%, 0 30%);
 	background: rgba(000, 000, 000, 0.2);
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
+
+	${device.lg}, ${device.sm} {
+		backdrop-filter: blur(2.5px);
+		-webkit-backdrop-filter: blur(2.5px);
+	}
 `;

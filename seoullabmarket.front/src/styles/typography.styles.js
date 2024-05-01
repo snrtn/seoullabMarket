@@ -2,12 +2,14 @@ import styled from 'styled-components';
 import isPropValid from '@emotion/is-prop-valid';
 import device from './mediaQuerie.styles';
 import colors from './color.styles';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Typography = {
 	H1: styled.h1.withConfig({
-		shouldForwardProp: (prop) => isPropValid(prop) && !['$fontWeight', '$textAlign', '$color'].includes(prop),
+		shouldForwardProp: (prop) =>
+			isPropValid(prop) && !['fontWeight', 'textAlign', 'color', 'smTextAlign', 'highlight'].includes(prop),
 	})`
+		font-family: Orbitron;
 		font-size: 3.6rem;
 		line-height: 4.5rem;
 		font-weight: ${({ fontWeight }) => fontWeight || 'normal'};
@@ -22,9 +24,42 @@ const Typography = {
 			font-size: 2.4rem;
 			line-height: 3rem;
 		}
+		${device.sm} {
+			text-align: ${({ smTextAlign }) => smTextAlign || 'left'};
+		}
+
+		${({ highlight }) =>
+			highlight &&
+			`
+    span {
+      position: relative;
+      cursor: pointer;
+      &::before {
+        content: '';
+        position: absolute;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: ${colors.white};
+        transform-origin: bottom left;
+        transform: scaleX(1vh);
+        transition: transform 0.3s ease-in-out;
+				${device.sm} {
+					transform: scaleX(0);
+				}
+      }
+
+      &:hover::before {
+        transform: scaleX(0);
+        transform-origin: bottom right;
+      }
+    }
+  `}
 	`,
 	H2: styled.h2.withConfig({
-		shouldForwardProp: (prop) => isPropValid(prop) && !['fontWeight', 'textAlign', 'color'].includes(prop),
+		shouldForwardProp: (prop) =>
+			isPropValid(prop) && !['fontWeight', 'textAlign', 'color', 'smTextAlign'].includes(prop),
 	})`
 		font-size: 3rem;
 		line-height: 3.75rem;
@@ -40,9 +75,13 @@ const Typography = {
 			font-size: 2rem;
 			line-height: 2.5rem;
 		}
+		${device.sm} {
+			text-align: ${({ smTextAlign }) => smTextAlign || 'left'};
+		}
 	`,
 	H3: styled.h3.withConfig({
-		shouldForwardProp: (prop) => isPropValid(prop) && !['fontWeight', 'textAlign', 'color'].includes(prop),
+		shouldForwardProp: (prop) =>
+			isPropValid(prop) && !['fontWeight', 'textAlign', 'color', 'smTextAlign'].includes(prop),
 	})`
 		font-size: 2.4rem;
 		line-height: 3rem;
@@ -57,6 +96,9 @@ const Typography = {
 		${device.lg} {
 			font-size: 1.8rem;
 			line-height: 2.25rem;
+		}
+		${device.sm} {
+			text-align: ${({ smTextAlign }) => smTextAlign || 'left'};
 		}
 	`,
 	P: styled.p.withConfig({
@@ -81,9 +123,10 @@ const Typography = {
 			line-height: 1.75rem;
 		}
 	`,
-	A: styled(Link).withConfig({
+	A: styled(NavLink).withConfig({
 		shouldForwardProp: (prop) =>
-			isPropValid(prop) && !['fontWeight', 'textAlign', 'color', 'highlight', 'highlightColor'].includes(prop),
+			isPropValid(prop) &&
+			!['fontWeight', 'textAlign', 'color', 'highlight', 'highlightColor', 'activeColor'].includes(prop),
 	})`
 		font-size: 1.6rem;
 		line-height: 2rem;
@@ -91,6 +134,10 @@ const Typography = {
 		text-align: ${({ textAlign }) => textAlign || 'left'};
 		color: ${({ color }) => color || colors.black};
 		letter-spacing: 0.01rem;
+		&.active {
+			color: ${({ activeColor }) => activeColor}; // 활성 링크 색상 변경
+		}
+
 		${({ highlight, highlightColor }) =>
 			highlight &&
 			`
