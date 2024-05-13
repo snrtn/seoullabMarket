@@ -11,17 +11,9 @@ const MenuPage = () => {
 				<Container.Article flexDirection={'column'}>
 					<Content.Box height={'10rem'} />
 					<HeaderMenu />
-					<br />
-					<br />
-					<br />
+					<Content.Box height={'5rem'} />
 					<Outlet />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
+					<Content.Box height={'10rem'} />
 				</Container.Article>
 			</Container.Wrapper>
 		</Container.Section>

@@ -1,8 +1,8 @@
 import React from 'react';
 import { mockData } from './mockData';
 import Container from '../../styles/container.styles';
-import Content from '../../styles/content.styles';
 import Typography from '../../styles/typography.styles';
+import Content from '../../styles/content.styles';
 
 const ListMenu = ({ endpoint }) => {
 	const items = mockData[endpoint] || [];
@@ -36,19 +36,19 @@ const ListMenu = ({ endpoint }) => {
 					<div key={category}>
 						<ul>
 							<Typography.H2 fontWeight={'bold'} highlight={true}>
-								{categoryTranslations[category]}
+								<Content.Image src={'/assets/drank.png'} width={'30px'} /> {categoryTranslations[category]}
 							</Typography.H2>
 							<br />
 							{groupedItems[category].map((item) => (
 								<li key={item.id} style={{ marginBottom: '2rem' }}>
-									<Typography.H3 highlight={true}>
+									<Typography.H3 fontWeight={'500'} highlight={true}>
 										<span>{item.name}</span>
 									</Typography.H3>
-									<Typography.P highlight={true}>
+									<Typography.P fontWeight={'300'} highlight={true}>
 										<span>{item.description ? item.description : ''}</span>
 									</Typography.P>
 									<br />
-									<Typography.P highlight={true}>
+									<Typography.P fontWeight={'500'} highlight={true}>
 										<span>{item.price} euro(€)</span>
 									</Typography.P>
 								</li>
@@ -60,14 +60,14 @@ const ListMenu = ({ endpoint }) => {
 				<ul>
 					{items.map((item) => (
 						<li key={item.id} style={{ margin: '4rem 0' }}>
-							<Typography.H3 highlight={true}>
-								<span>{item.name}</span>
+							<Typography.H3 fontWeight={'500'} highlight={true}>
+								<Content.Image src={'/assets/food.png'} width={'30px'} /> <span>{item.name}</span>
 							</Typography.H3>
-							<Typography.P highlight={true}>
+							<Typography.P fontWeight={'300'} highlight={true}>
 								<span>{item.description}</span>
 							</Typography.P>
 							<br />
-							<Typography.P highlight={true}>
+							<Typography.P fontWeight={'500'} highlight={true}>
 								<span>{item.price} euro(€)</span>
 							</Typography.P>
 						</li>

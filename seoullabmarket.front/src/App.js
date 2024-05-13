@@ -6,6 +6,7 @@ import MenuPage from './pages/menuPage';
 // import GalleryPage from './pages/galleryPage';
 import ListMenu from './components/menus/listMenu';
 import NotFoundPage from './pages/notFoundPage';
+import Welcome from './components/menus/welcome';
 
 function App() {
 	return (
@@ -14,7 +15,7 @@ function App() {
 				<Route path='/' element={<Layout />}>
 					<Route index element={<HomePage />} />
 					<Route path='menu' element={<MenuPage />}>
-						<Route index element={<div>Welcome to the Menu Page</div>} />
+						<Route index element={<Welcome />} />
 						<Route path='starters' element={<ListMenu endpoint='starters' />} />
 						<Route path='mains' element={<ListMenu endpoint='mains' />} />
 						<Route path='desserts' element={<ListMenu endpoint='desserts' />} />
