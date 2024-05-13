@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './router/layout';
 import HomePage from './pages/homePage';
 import MenuPage from './pages/menuPage';
-import GalleryPage from './pages/galleryPage';
+// import GalleryPage from './pages/galleryPage';
 import ListMenu from './components/menus/listMenu';
 import NotFoundPage from './pages/notFoundPage';
 
@@ -21,7 +21,7 @@ function App() {
 						<Route path='drinks' element={<ListMenu endpoint='drinks' />} />
 						<Route path='*' element={<NotFoundPage />} />
 					</Route>
-					<Route path='gallery' element={<GalleryPage />} />
+					{/* <Route path='gallery' element={<GalleryPage />} /> */}
 					<Route path='*' element={<NotFoundPage />} />
 				</Route>
 			</Routes>

@@ -82,6 +82,11 @@ const Container = {
 				'alignItems',
 				'lgPadding',
 				'xlPadding',
+				'mdDisplay',
+				'lgDisplay',
+				'xlDisplay',
+				'xlAlignItems',
+				'xlHeight',
 			].includes(prop),
 	})`
 		display: flex;
@@ -104,9 +109,13 @@ const Container = {
 			-webkit-backdrop-filter: blur(5px);
 		`}
 		${device.xl} {
+			align-items: ${({ xlAlignItems }) => xlAlignItems || 'center'};
+			display: ${({ xlDisplay }) => xlDisplay || 'flex'};
+			height: ${({ xlHeight }) => xlHeight};
 			padding: ${({ xlPadding }) => xlPadding || '0'};
 		}
 		${device.lg} {
+			display: ${({ lgDisplay, xlDisplay }) => (lgDisplay ? xlDisplay : 'flex')};
 			flex: ${({ lgFlex }) => lgFlex || 1};
 			flex-direction: ${({ lgFlexDirection, flexDirection }) => lgFlexDirection || flexDirection};
 			width: ${({ lgWidth }) => lgWidth || '100%'};
@@ -114,6 +123,9 @@ const Container = {
 			max-width: ${({ lgMaxWidth }) => lgMaxWidth || '100%'};
 			max-height: ${({ lgMaxHeight }) => lgMaxHeight || '100%'};
 			padding: ${({ lgPadding, xlPadding }) => (lgPadding ? xlPadding : lgPadding)};
+		}
+		${device.md} {
+			display: ${({ mdDisplay, lgDisplay }) => (mdDisplay ? lgDisplay : mdDisplay)};
 		}
 		${device.sm} {
 			display: ${({ smDisplay }) => smDisplay || 'flex'};

@@ -78,11 +78,11 @@ export const Content = styled.div`
 	}
 
 	${device.lg} {
-		bottom: 0; // 모바일 및 태블릿에서 보이도록 설정
-		height: 100%; // 전체 높이 적용
-		background-color: rgba(0, 0, 0, 0.5); // 글라시모 효과를 위한 반투명 배경
-		backdrop-filter: blur(2.5px); // 글라시모 효과 적용
-		-webkit-backdrop-filter: blur(2.5px); // 사파리 및 구형 브라우저 지원
+		bottom: 0;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		backdrop-filter: blur(2.5px);
+		-webkit-backdrop-filter: blur(2.5px);
 
 		&::before {
 			display: none;

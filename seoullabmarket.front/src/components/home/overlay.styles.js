@@ -7,6 +7,9 @@ export const Frame = styled.div`
 	${device.xl} {
 		gap: 20px;
 	}
+	${device.lg} {
+		gap: 50px;
+	}
 	${device.sm} {
 		flex-direction: column;
 		gap: 60px;

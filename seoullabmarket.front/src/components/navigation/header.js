@@ -9,16 +9,16 @@ const Header = () => {
 		<Container.Wrapper height={'6.4rem'} position={'fixed'} style={{ zIndex: '9999' }}>
 			<Container.Article height={'6.4rem'} Glassmorphism={true}>
 				<Content.Box maxWidth={'120rem'}>
-					<Content.Box justifyContent={'space-between'} maxWidth={'60rem'}>
+					<Content.Box justifyContent={'space-evenly'} maxWidth={'60rem'}>
 						<Typography.A color={colors.darkWhite} to='/' activeColor={colors.orange}>
 							Accueil
 						</Typography.A>
 						<Typography.A color={colors.darkWhite} to='/menu' activeColor={colors.orange}>
 							Menu
 						</Typography.A>
-						<Typography.A color={colors.darkWhite} to='/gallery' activeColor={colors.orange}>
+						{/* <Typography.A color={colors.darkWhite} to='/gallery' activeColor={colors.orange}>
 							Galerie
-						</Typography.A>
+						</Typography.A> */}
 					</Content.Box>
 				</Content.Box>
 			</Container.Article>

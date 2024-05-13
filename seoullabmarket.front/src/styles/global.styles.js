@@ -42,6 +42,9 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     cursor: pointer;
   }
+  li {
+    list-style: none;
+  }
   iframe {
     border: none;
   }

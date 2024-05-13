@@ -18,12 +18,24 @@ const HomePage = () => {
 				</Container.Article>
 			</Container.Wrapper>
 			<Container.Wrapper backgroundColor={colors.black}>
-				<Container.Article maxHeight={'80rem'} height={'80rem'} lgHeight={'65rem'} smHeight={'40rem'}>
+				<Container.Article
+					maxHeight={'80rem'}
+					height={'80rem'}
+					xlHeight={'60rem'}
+					lgHeight={'45rem'}
+					smHeight={'40rem'}
+				>
 					<Izakaya />
 				</Container.Article>
 			</Container.Wrapper>
 			<Container.Wrapper backgroundColor={colors.black}>
-				<Container.Article maxHeight={'80rem'} height={'80rem'} lgHeight={'60rem'} smHeight={'100rem'}>
+				<Container.Article
+					maxHeight={'80rem'}
+					height={'80rem'}
+					xlHeight={'60rem'}
+					lgHeight={'45rem'}
+					smHeight={'100rem'}
+				>
 					<Overlay />
 				</Container.Article>
 			</Container.Wrapper>

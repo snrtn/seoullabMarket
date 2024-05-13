@@ -9,7 +9,12 @@ function Izakaya() {
 	return (
 		<Container.Section>
 			<Container.Wrapper width={'130rem'} smFlexDirection={'column'}>
-				<Container.Article flexDirection={'column'} alignItems={'left'} xlPadding={'0 1rem 0 3rem'}>
+				<Container.Article
+					flexDirection={'column'}
+					alignItems={'left'}
+					xlAlignItems={'center'}
+					xlPadding={'0 1rem 0 3rem'}
+				>
 					<Typography.H1 color={colors.white} smTextAlign={'center'} highlight={true}>
 						<span>Cuisine coréenne moderne</span>
 					</Typography.H1>
@@ -33,7 +38,7 @@ function Izakaya() {
 						</span>
 					</Typography.A>
 				</Container.Article>
-				<Container.Article justifyContent={'left'} smDisplay={'none'}>
+				<Container.Article justifyContent={'left'} xlDisplay={'none'} smDisplay={'none'}>
 					<Photo>
 						<div>
 							<img src='/assets/izakaya.jpg' alt='Product Image' />
