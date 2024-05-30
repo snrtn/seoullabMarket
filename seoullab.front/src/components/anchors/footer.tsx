@@ -1,7 +1,7 @@
-import React from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
 import { SnsSection, StyledLink, CustomLink } from './footer.styles';
 
 const Footer = () => {
@@ -12,14 +12,14 @@ const Footer = () => {
 				color: '#fff',
 				padding: '2rem 0',
 				textAlign: 'center',
-				height: '30rem',
+				height: '70vh',
 				display: 'flex',
 				flexDirection: 'column',
 				justifyContent: 'center',
 				alignItems: 'center',
 			}}
 		>
-			<Container sx={{ marginBottom: '2rem' }}>
+			<Container sx={{ marginBottom: '1rem' }}>
 				<Typography variant='h1' component='h1' fontWeight='bold'>
 					Seoul Lab
 				</Typography>
@@ -27,7 +27,7 @@ const Footer = () => {
 					Cuisine coréenne moderne
 				</Typography>
 			</Container>
-			<Container sx={{ marginBottom: '2rem' }}>
+			<Container sx={{ marginBottom: '3rem' }}>
 				<Box display='flex' justifyContent='center' gap='2rem'>
 					<CustomLink to='#' color='inherit' highlight={true} highlightColor={'orange'}>
 						Entrées
@@ -51,6 +51,17 @@ const Footer = () => {
 					<FontAwesomeIcon className='fa' icon={faLinkedin} />
 				</StyledLink>
 			</SnsSection>
+			<Container sx={{ marginTop: '3rem' }}>
+				<Typography variant='body1' fontWeight='bold'>
+					Voulez-vous créer gratuitement votre propre site web et portfolio ?
+				</Typography>
+				<Typography variant='body2' color='gray'>
+					Si vous êtes intéressé, vous pouvez me contacter par message privé sur LinkedIn pour une consultation.
+				</Typography>
+				<Typography variant='body2' color='gray'>
+					Aucuns frais de production ne sont demandés.
+				</Typography>
+			</Container>
 		</Box>
 	);
 };

@@ -5,6 +5,7 @@ import SectionLayout from '../components/common/sectionLayout';
 import Slide from '../components/accueils/slide';
 import Introduction from '../components/accueils/introduction';
 import MenuPhoto from '../components/accueils/menuPhoto';
+import Outline from '../components/accueils/outline';
 import Instagram from '../components/accueils/instagram';
 import RestaurantPhoto from '../components/accueils/restaurantPhoto';
 import GoogleMap from '../components/accueils/googleMap';
@@ -19,11 +20,14 @@ const AccueilView: React.FC = () => {
 			<SectionLayout desktop='90vh'>
 				<Slide />
 			</SectionLayout>
-			<SectionLayout desktop='120vh' tablet='60vh' mobile='250vh'>
+			<SectionLayout desktop='120vh' tablet='180vh' mobile='260vh'>
 				<Introduction />
 			</SectionLayout>
 			<SectionLayout desktop='100%'>
 				<MenuPhoto />
+			</SectionLayout>
+			<SectionLayout desktop='80vh' tablet='60vh' mobile='100vh'>
+				<Outline />
 			</SectionLayout>
 			<SectionLayout desktop='80vh' tablet='60vh' mobile='100vh'>
 				<Instagram />

@@ -7,7 +7,7 @@ const slides = [
 		title: 'Un festin coréen varié',
 		description:
 			"Un festin magnifique composé de divers plats coréens accompagné d'un verre de vin. Il y a du kimchi, des raviolis, des crêpes et bien d'autres plats coréens.",
-		image: 'assets/slide/IMG_8759.jpg',
+		image: 'assets/slide/img8759.jpg',
 	},
 	{
 		title: 'Cuisine coréenne raffinée',
@@ -19,7 +19,7 @@ const slides = [
 		title: 'Viande savoureuse et légumes frais',
 		description:
 			'Un plat coréen joliment présenté avec de la viande bien cuite et une salade de légumes frais. À déguster avec un verre de vin.',
-		image: 'assets/slide/IMG_8765.jpg',
+		image: 'assets/slide/img8765.jpg',
 	},
 	{
 		title: "Intérieur chaleureux d'un restaurant coréen",
@@ -31,7 +31,7 @@ const slides = [
 		title: 'Plats coréens traditionnels et éclairage',
 		description:
 			"Une table remplie de plats coréens traditionnels avec un éclairage chaleureux. Une harmonie entre la cuisine traditionnelle et l'intérieur moderne.",
-		image: 'assets/slide/IMG_8797.JPG',
+		image: 'assets/slide/img8797.jpg',
 	},
 ];
 

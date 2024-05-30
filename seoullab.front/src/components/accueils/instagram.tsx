@@ -1,8 +1,11 @@
 import React from 'react';
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography, Button, useMediaQuery, useTheme } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Instagram = () => {
+	const theme = useTheme();
+	const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
 	return (
 		<Box
 			sx={{
@@ -22,7 +25,13 @@ const Instagram = () => {
 			<Typography variant='h6' sx={{ marginBottom: '20px', fontWeight: 'bold' }}>
 				Suivez-nous sur Instagram
 			</Typography>
-			<Typography variant='h6' sx={{ marginBottom: '20px' }}>
+			<Typography
+				variant='h6'
+				sx={{
+					marginBottom: '20px',
+					fontSize: isMobile ? '1rem' : 'inherit',
+				}}
+			>
 				Découvrez les coulisses de notre restaurant, les nouveaux plats, et bien plus encore en nous suivant sur
 				Instagram!
 			</Typography>
